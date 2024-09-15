@@ -1,0 +1,89 @@
+body {
+  background-color: #9b59b6; /* Fallback solid color */
+  opacity: 0;
+  transition: opacity 1s ease-in 1s; /* Transition for 1 second */
+}
+
+body.loaded {
+  opacity: 1;
+}
+
+#quote-box {
+  color: rgba(155, 89, 182);
+  margin: 40px auto;
+  width: 70%;
+  padding: 50px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+#quote-group {
+  display: flex;
+  align-items: flex-start;
+}
+
+#quote {
+  font-size: 30px;
+  margin-right: 20px;
+}
+
+#tweet-quote i {
+  color: rgba(155, 89, 182);
+  font-size: 30px;
+}
+
+#tweet-quote i:hover {
+  color: rgba(190, 132, 209);
+}
+
+#quote-author {
+  display: block; 
+  text-align: right;
+  font-size: 30px;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: space-between; /* Spreads the Twitter icon and the button*/ 
+  align-items: center;
+  margin-top: 20px;
+}
+
+#new-quote {
+  background-color: rgba(155, 89, 182);
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  padding: 5px;
+  display: block;
+  text-align: center;
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+#web-author-notes {
+  text-align: center;
+}
+
+#web-author-notes, #web-author-notes a {
+  color: white;
+}
+
+#web-author-notes a:hover {
+  color: rgba(190, 132, 209);
+}
+
+/* Hide the quote and author initially */
+#quote, #text, #quote-author {
+  opacity: 0;
+  transition: opacity 1s ease; /* Transition for a smooth fade-in effect */
+}
+
+/* When loaded, apply the fade-in */
+.loaded #quote, .loaded #text, .loaded #quote-author {
+  opacity: 1;
+}
+
+/* color transitions are smooth when changing background and text colors */
+#quote, #quote-box, #text, #quote-author, #new-quote, #tweet-quote i {
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
